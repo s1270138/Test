@@ -4,8 +4,14 @@ using namespace std;
 int main(){
     srand( (unsigned int)time( NULL ) );
 
-    int heads = 0, tails = 0;
-    cout << "Tossing a coin..." << endl;
+    string name;
+    cout << "Who are you?" << endl
+         << "> ";
+    cin >> name;
+    cout << "Hello, " << name << endl;
+
+    int heads = 0, tails = 0;    cout << "Tossing a coin..." << endl;
+
     for( int i = 1; i <= 3; i++ ){
         cout << "Round " << i << ": ";
         if( rand() % 2 ){
@@ -19,8 +25,8 @@ int main(){
 
     cout << "Heads: " << heads << ", Tails: " << tails << endl;
     if( heads > tails ){
-        cout << "You won" << endl;
+        cout << name << " won" << endl;
     }else{
-        cout << "You lost" << endl;
+        cout << name << " lost" << endl;
     }
 }
